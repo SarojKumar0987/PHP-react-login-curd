@@ -4,14 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Login = () => {
-  // State for email, password, error message, and loading state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // To store error messages
-  const [loading, setLoading] = useState(false); // Loading state for submit button
-  const [emailError, setEmailError] = useState(""); // To store email validation error
-  const [passwordError, setPasswordError] = useState(""); // To store password validation error
-  const navigate = useNavigate(); // To navigate to the dashboard after successful login
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false); 
+  const [emailError, setEmailError] = useState(""); 
+  const [passwordError, setPasswordError] = useState(""); 
+  const navigate = useNavigate(); 
 
   // Handle form submission
   const handleLogin = async (e) => {
@@ -54,7 +53,7 @@ const Login = () => {
 
     try {
       // Send POST request to your backend API (adjust URL as needed)
-      const response = await fetch("http://localhost/api/login.php", {
+      const response = await fetch("", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

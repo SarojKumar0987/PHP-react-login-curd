@@ -12,7 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     const loadRecords = async () => {
       try {
-        const response = await fetch("http://localhost/api/index.php", {
+        const response = await fetch("", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -29,7 +29,7 @@ const Dashboard = () => {
   // Create a new record
   const createRecord = async (record) => {
     try {
-      const response = await fetch("http://localhost/api/create.php", {
+      const response = await fetch("", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(record),
@@ -45,7 +45,7 @@ const Dashboard = () => {
   // Update an existing record
   const updateRecord = async (id, record) => {
     try {
-      const response = await fetch(`http://localhost/api/update.php/${id}`, {
+      const response = await fetch(``, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(record),
@@ -61,7 +61,7 @@ const Dashboard = () => {
   // Delete a record
   const deleteRecord = async (id) => {
     try {
-      const response = await fetch("http://localhost/api/delete.php", {
+      const response = await fetch("", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id }),
@@ -115,7 +115,7 @@ const Dashboard = () => {
   // Logout functionality
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost/api/logout.php", {
+      const response = await fetch("", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
