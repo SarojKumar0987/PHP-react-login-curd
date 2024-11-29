@@ -53,7 +53,7 @@ const Login = () => {
 
     try {
       // Send POST request to your backend API (adjust URL as needed)
-      const response = await fetch("", {
+      const response = await fetch("http://localhost/api/login.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
